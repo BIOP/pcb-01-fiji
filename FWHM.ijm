@@ -25,7 +25,7 @@ if( nRois == 0 ) {
 function doFWHM( doShow ) {
 	
 	imageName = getTitle();
-	
+	roiName = Roi.getName;
 	X = getProfile();
 	getVoxelSize(px, py, pz, unit);
 	// To get everything calibrated already
@@ -53,5 +53,5 @@ function doFWHM( doShow ) {
 	setResult("Label", n, imageName);
 	Stack.getPosition(channel, slice, frame);
 	setResult("Channel", n, channel);
-	setResult("ROI", n, Roi.getName());
+	setResult("ROI", n, roiName);
 }
